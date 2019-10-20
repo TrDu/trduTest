@@ -7,14 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * @Author: tanyong
  * @Description:
- * @Date: 2019/6/28 17:39
+ * @Date: 2019/10/20
  * @Modified By:
  */
 @Controller
-@RequestMapping("/main")
-public class TestController {
+@RequestMapping("/")
+public class BaseController {
     @GetMapping("/index")
     public String index(){
         return "index";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "system/login";
     }
 }
